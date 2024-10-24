@@ -1,4 +1,5 @@
-import { List, Vec2D, exaustive_switch, Opt, CoreExtensions, HashMap } from 'vanilla_core';
+import { List, exaustive_switch, Opt, CoreExtensions, HashMap } from 'vanilla_core';
+import { Vec2D } from 'vanilla_math';
 
 const PROP_NAME_MAP = {
     position: { css: "position", js: "position" },
@@ -739,7 +740,7 @@ class MouseState {
                 break;
             case "mouse_move":
                 this.position_ = raw_ev.val.position.clone();
-                this.shift_ = this.shift_.plus(raw_ev.val.shift);
+                this.shift_ = this.shift_.plus_vec(raw_ev.val.shift);
                 break;
             case "mouse_wheel":
                 this.scroll_ += raw_ev.val.amount;

@@ -1,4 +1,5 @@
-import { Color, Vec2D, Opt } from 'vanilla_core';
+import { Color, Opt } from 'vanilla_core';
+import { Vec2D } from 'vanilla_math';
 
 type CssStyleObj = {
     position?: "static" | "relative" | "absolute" | "fixed" | "sticky";
